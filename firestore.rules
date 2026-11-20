@@ -1,0 +1,30 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isAdmin() {
+      return request.auth != null &&
+        request.auth.uid in [
+          "PASTE_ADMIN_USER_UID_HERE"
+        ];
+    }
+    match /orders/{orderId} {
+      // Anyone may submit an order; customers cannot read or edit orders.
+      allow create: if
+        request.resource.data.keys().hasAll([
+          'gameId','gameName','playerId','packageName','price',
+          'customerName','customerContact','paymentMethod',
+          'transactionRef','status','createdAt'
+        ]) &&
+        request.resource.data.status == 'Pending' &&
+        request.resource.data.price is number &&
+        request.resource.data.price > 0 &&
+        request.resource.data.playerId is string &&
+        request.resource.data.playerId.size() > 0 &&
+        request.resource.data.customerName is string &&
+        request.resource.data.customerContact is string &&
+        request.resource.data.transactionRef is string &&
+        request.resource.data.paymentMethod in ['KHQR','ABA'];
+      allow read, update, delete: if isAdmin();
+    }
+  }
+}

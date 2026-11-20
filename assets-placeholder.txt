@@ -1,0 +1,1 @@
+Create an assets/ folder and add your own merchant QR image named your-khqr.png.

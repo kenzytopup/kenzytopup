@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="km">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7931e">
+  <title>KENZY TOPUP | Game Top Up Cambodia</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">K</span><span>KENZY <b>TOPUP</b><small>GAME TOP UP CENTER</small></span></a>
+  <nav><a href="#games">ហ្គេម</a><a href="#how">របៀបទិញ</a><a href="admin.html">Admin</a></nav>
+  <a class="cart-link" href="#order">បញ្ជាទិញ <span>↗</span></a>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">WELCOME TO KENZY TOPUP</span>
+      <h1>បញ្ចូលពេជ្រ និង Game Credit<br><em>បានលឿន ងាយស្រួល</em></h1>
+      <p>ជ្រើសរើសហ្គេម កញ្ចប់ដែលអ្នកចង់បាន ហើយបញ្ជាទិញតាមជំហានងាយៗ។</p>
+      <a class="primary-btn" href="#games">ជ្រើសរើសហ្គេម <span>→</span></a>
+      <div class="trust"><span>✓</span> បញ្ជាទិញងាយៗ <span>✓</span> គាំទ្រការទូទាត់ KHQR / ABA</div>
+    </div>
+    <div class="hero-art" aria-label="Gaming illustration">
+      <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+      <div class="gamepad">🎮</div><div class="spark s1">✦</div><div class="spark s2">✧</div>
+      <div class="hero-tag">TOP UP<br><b>YOUR GAME</b></div>
+    </div>
+  </section>
+
+  <section class="section" id="games">
+    <div class="section-heading"><div><span class="eyebrow">CHOOSE YOUR GAME</span><h2>ហ្គេមពេញនិយម</h2></div><span class="muted">ជ្រើសរើសហ្គេមមួយ</span></div>
+    <div class="game-grid" id="gameGrid"></div>
+  </section>
+
+  <section class="section order-section" id="order">
+    <div class="section-heading"><div><span class="eyebrow">ORDER FORM</span><h2>បញ្ជាទិញ Top Up</h2></div><span class="step-pill">STEP 01 — 03</span></div>
+    <div class="order-layout">
+      <div class="panel">
+        <label for="gameSelect">១. ជ្រើសរើសហ្គេម</label>
+        <select id="gameSelect"></select>
+        <div class="field-row">
+          <div><label for="playerId">២. Game ID / Player ID</label><input id="playerId" placeholder="បញ្ចូល Game ID" autocomplete="off"></div>
+          <div id="serverWrap"><label for="serverId">Server ID</label><input id="serverId" placeholder="Server ID (បើមាន)"></div>
+        </div>
+        <label for="packageSelect">៣. ជ្រើសរើសកញ្ចប់</label>
+        <div class="package-grid" id="packageGrid"></div>
+        <div class="field-row">
+          <div><label for="customerName">ឈ្មោះអ្នកទិញ</label><input id="customerName" placeholder="ឈ្មោះរបស់អ្នក"></div>
+          <div><label for="customerContact">លេខទូរស័ព្ទ / Telegram</label><input id="customerContact" placeholder="0XX XXX XXX"></div>
+        </div>
+        <button class="primary-btn full" id="continueBtn">បន្តទៅការទូទាត់ →</button>
+        <p class="fineprint">សូមពិនិត្យ Game ID និង Server ID ឱ្យបានត្រឹមត្រូវ មុនពេលបញ្ជាទិញ។</p>
+      </div>
+      <aside class="summary-card">
+        <h3>សេចក្ដីសង្ខេប</h3>
+        <div class="summary-game"><span id="summaryIcon">🎮</span><div><b id="summaryGame">មិនទាន់ជ្រើសរើស</b><small id="summaryPackage">មិនទាន់មានកញ្ចប់</small></div></div>
+        <div class="summary-line"><span>តម្លៃទំនិញ</span><b id="summaryPrice">$0.00</b></div>
+        <div class="summary-line"><span>សេវាកម្ម</span><b>ឥតគិតថ្លៃ</b></div>
+        <div class="summary-total"><span>សរុប</span><b id="summaryTotal">$0.00</b></div>
+        <div class="secure-note">🔒 ព័ត៌មានការបញ្ជាទិញត្រូវបានរក្សាទុកក្នុងប្រព័ន្ធ។</div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section how-section" id="how">
+    <span class="eyebrow">HOW IT WORKS</span><h2>របៀបទិញ ៣ ជំហាន</h2>
+    <div class="how-grid">
+      <article><b>01</b><h3>ជ្រើសរើសហ្គេម</h3><p>ជ្រើសរើសហ្គេម និងកញ្ចប់ដែលអ្នកចង់បាន។</p></article>
+      <article><b>02</b><h3>បង់ប្រាក់</h3><p>ស្កេន KHQR ឬផ្ទេរតាម ABA ហើយបញ្ចូលលេខប្រតិបត្តិការ។</p></article>
+      <article><b>03</b><h3>រង់ចាំបញ្ចូល</h3><p>Admin ពិនិត្យការទូទាត់ និងដំណើរការការបញ្ជាទិញ។</p></article>
+    </div>
+  </section>
+</main>
+
+<footer><a class="brand footer-brand" href="#"><span class="brand-mark">K</span><span>KENZY <b>TOPUP</b><small>GAME TOP UP CENTER</small></span></a><p>© <span id="year"></span> KENZY TOPUP. All rights reserved.</p><small>Unofficial top-up storefront. Game trademarks belong to their respective owners.</small></footer>
+
+<div class="modal-backdrop" id="paymentModal" hidden>
+  <section class="payment-modal" role="dialog" aria-modal="true" aria-labelledby="paymentTitle">
+    <button class="close-modal" id="closeModal" aria-label="Close">×</button>
+    <span class="eyebrow">FINAL STEP</span><h2 id="paymentTitle">ការទូទាត់ប្រាក់</h2>
+    <p class="muted">សូមជ្រើសរើសវិធីបង់ប្រាក់ ហើយបំពេញព័ត៌មានខាងក្រោម។</p>
+    <div class="pay-tabs"><button class="pay-tab active" data-method="KHQR">KHQR</button><button class="pay-tab" data-method="ABA">ABA Pay</button></div>
+    <div class="pay-info" id="payInfo"></div>
+    <label for="transactionRef">លេខប្រតិបត្តិការ / Transaction ID</label>
+    <input id="transactionRef" placeholder="បញ្ចូលលេខប្រតិបត្តិការ">
+    <label for="paymentNote">ចំណាំ (មិនចាំបាច់)</label>
+    <input id="paymentNote" placeholder="បើមានព័ត៌មានបន្ថែម">
+    <button class="primary-btn full" id="submitOrder">ខ្ញុំបានបង់ប្រាក់រួច — ដាក់បញ្ជាទិញ</button>
+    <p class="fineprint">កុំចែករំលែក PIN, OTP ឬលេខសម្ងាត់ ABA របស់អ្នក។</p>
+  </section>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
